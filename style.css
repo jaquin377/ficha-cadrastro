@@ -26,6 +26,49 @@ body{
     flex: 1;
 }
 
-.cadastro-topo {
+.cadastro-topo{
     flex: 4;
+}
+
+.cadastro-topo p {
+    padding-right: 250px;
+}
+.documentos-necessarios {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    background-color: #ffdead;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.imagem-documentos {
+    flex: 1;
+}
+
+.dados-left {
+    flex: 2px;
+}
+
+.dados-right {
+    flex: 2px;
+}
+
+.imagem-documentos img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-documentos img {
+    width: 70px;
+}
+.dados-left {
+    flex: 2px;
+}
+
+.dados-right {
+    flex: 2px;
 }
