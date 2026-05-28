@@ -7,7 +7,7 @@ body{
 .topo{
     display: flex;
     width: 1000px;
-    background-color: #0000ff;
+    background-color: #0000FF;
     border-radius: 10px;
     margin: auto;
     margin-top: 40px;
@@ -16,7 +16,7 @@ body{
 }
 
 .topo img{
-    width: 50px;
+    width: 100px;
 }
 
 .image {
@@ -37,40 +37,30 @@ body{
     display: flex;
     width: 1000px;
     margin: auto;
-    background-color: #ffdead;
+    background-color: #87CEEB;
     padding: 25px;
     margin-top: 30px;
     border-radius: 10px;
 }
 
 .imagem-documentos {
-    flex: 1;
-}
-
-.dados-left {
-    flex: 2px;
-}
-
-.dados-right {
-    flex: 2px;
-}
-
-.imagem-documentos img {
     flex: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.documentos-necessarios img {
+.imagem-documentos img{
     width: 85px;
-}
+} 
+
+
 .dados-left {
-    flex: 2000px;
+    flex: 2px;
 }
 
 .dados-right {
-    flex: 2000px;
+    flex: 2px;
 }
 
 .dados-pessoais {
@@ -81,6 +71,7 @@ body{
     background-color: #A9A9A9;
     border-radius: 10px;
     margin-top: 30px;
+    flex-direction: column;
 }
 
 .informacao-funcionario {
@@ -92,8 +83,45 @@ body{
 .informacao-funcionario p {
     background-color: #ccc;
     line-height: 3;
-    padding-left: 4px;
-    padding: 2px 8px 2px 8px;
+    padding-left: 20px 8px 2px 8px;
     font-size: 12px;
     border-radius: 4px;
+}
+
+.pequeno {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.medio {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.grande{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.extra{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha {
+    display: flex;
+    width: 950px;
+    gap: 20px;
+}
+
+input {
+    height: 32px;
+    border: solid 1px cadetblue;
+    border-radius: 4px;
+    outline: none;
+    padding: 6px;
 }
