@@ -1,21 +1,35 @@
-body{
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
-    padding: 0;
+    padding: 30px 15px;
     background-color: #efefef;
+    font-family: Arial, sans-serif;
 }
 
-.topo{
-    display: flex;
-    width: 1000px;
-    background-color: #0000FF;
-    border-radius: 10px;
+/* Container */
+.container {
+    max-width: 1000px;
+    width: 100%;
     margin: auto;
-    margin-top: 40px;
-    padding: 25px;
-    color: #fff;
 }
 
-.topo img{
+/* TOPO */
+.topo {
+    display: flex;
+    background-color: #F5DEB3;
+    border-radius: 12px;
+    padding: 30px;
+    color: #fff;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.topo img {
     width: 100px;
 }
 
@@ -26,102 +40,169 @@ body{
     flex: 1;
 }
 
-.cadastro-topo{
+.cadastro-topo {
     flex: 4;
 }
 
-.cadastro-topo p {
-    padding-right: 250px;
+.cadastro-topo h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
 }
+
+.cadastro-topo p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* DOCUMENTOS */
 .documentos-necessarios {
     display: flex;
-    width: 1000px;
-    margin: auto;
     background-color: #87CEEB;
-    padding: 25px;
+    padding: 30px;
     margin-top: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .imagem-documentos {
-    flex: 0;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imagem-documentos img{
+.imagem-documentos img {
     width: 85px;
-} 
-
-
-.dados-left {
-    flex: 2px;
 }
 
+.dados-left,
 .dados-right {
-    flex: 2px;
+    flex: 2;
 }
 
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* FORMULÁRIO */
 .dados-pessoais {
     display: flex;
-    width: 1000px;
-    margin: auto;
-    padding: 25px;
+    padding: 30px;
     background-color: #A9A9A9;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 30px;
     flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .informacao-funcionario {
     display: flex;
     justify-content: space-between;
-    width: 900px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.informacao-funcionario h2 {
+    margin: 0;
 }
 
 .informacao-funcionario p {
-    background-color: #ccc;
-    line-height: 3;
-    padding-left: 20px 8px 2px 8px;
+    background-color: #d9d9d9;
+    padding: 8px 14px;
     font-size: 12px;
-    border-radius: 4px;
+    border-radius: 20px;
+    margin: 0;
+    color: #333;
+}
+
+/* LAYOUT DOS INPUTS */
+.linha {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 18px;
+}
+
+.pequeno,
+.medio,
+.grande,
+.extra,
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .pequeno {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    min-width: 140px;
 }
 
-.medio {
+.medio,
+.input-group {
     flex: 2;
-    display: flex;
-    flex-direction: column;
+    min-width: 180px;
 }
 
-.grande{
+.grande {
     flex: 3;
-    display: flex;
-    flex-direction: column;
+    min-width: 250px;
 }
 
-.extra{
+.extra {
     flex: 6;
-    display: flex;
-    flex-direction: column;
 }
 
-.linha {
-    display: flex;
-    width: 950px;
-    gap: 20px;
+/* LABEL */
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #222;
 }
 
-input {
-    height: 32px;
-    border: solid 1px cadetblue;
-    border-radius: 4px;
+/* INPUTS */
+input,
+select {
+    height: 42px;
+    border: 1px solid #5f9ea0;
+    border-radius: 8px;
     outline: none;
-    padding: 6px;
+    padding: 0 12px;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.2s ease;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #2f6f73;
+    box-shadow: 0 0 0 3px rgba(95, 158, 160, 0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .topo,
+    .documentos-necessarios {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .informacao-funcionario {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .linha {
+        gap: 12px;
+    }
 }
