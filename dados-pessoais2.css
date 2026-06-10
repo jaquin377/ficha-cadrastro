@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    background-color: #efefef;
+    font-family: Arial, sans-serif;
+}
+
+/* FORMULÁRIO - DOCUMENTOS NECESSÁRIOS */
+.dados-pessoais2 {
+    display: flex;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 60px;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* CABEÇALHO DO FORMULÁRIO */
+.informacao-funcionario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.informacao-funcionario h2 {
+    margin: 0;
+    color: #222;
+}
+
+.informacao-funcionario p {
+    background-color: #d9d9d9;
+    padding: 8px 14px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin: 0;
+    color: #333;
+}
+
+/* LAYOUT DOS INPUTS */
+.linha {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 18px;
+}
+
+.pequeno,
+.medio,
+.grande,
+.extra,
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pequeno {
+    flex: 1;
+    min-width: 140px;
+}
+
+.medio,
+.input-group {
+    flex: 2;
+    min-width: 180px;
+}
+
+.grande {
+    flex: 3;
+    min-width: 250px;
+}
+
+.extra {
+    flex: 6;
+}
+
+/* LABEL */
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #222;
+}
+
+/* INPUTS */
+input,
+select {
+    height: 42px;
+    border: 1px solid #5f9ea0;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 12px;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.2s ease;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #2f6f73;
+    box-shadow: 0 0 0 3px rgba(95, 158, 160, 0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .informacao-funcionario {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .linha {
+        gap: 12px;
+    }
+}
