@@ -115,11 +115,7 @@
                 </div>
             </div>
         </form>
-    </div>
-</body>
-</html>
-
-<form class="dados-pessoais2">
+        <div class="dados-pessoais2">
     <div class="informacao-funcionario">
         <h2>2. Documentos Necessários</h2>
         <p>Dados para identificação e registro</p>
@@ -234,4 +230,55 @@
             <input type="text" id="categoria" required>
         </div>
     </div>
-</form>
+    </div>
+    <div class="dados-pessoais3">
+         <div class="informacao-funcionario">
+        <h2>3.Filiação e Estado Civil</h2>
+        <p>informações familiares e escolares</p>
+    </div>
+ <div class="pequeno">
+            <label for="Nome">Nome do pai</label>
+            <input type="text" id="nome" required>
+        </div>
+        <div class="pequeno">
+            <label for="Nome">Nome da mãe</label>
+            <input type="text" id="Nome" required>
+        </div>
+        <label for="estado-civil">Estado Civil:</label>
+            <select id="estado-civil" name="estadoCivil" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
+                <option value="uniao_estavel">União Estável</option>
+            </select>
+        </div>
+         <div class="pequeno">
+            <label for="Cônjuge">Cônjuge (nome completo)</label>
+            <input type="text" id="Cônjuge" required>
+        </div>
+        <div class="grupo-opcao">
+            <p class="titulo">Grau de Instrução / Escolaridade:</p>
+            
+            <label>
+                <input type="radio" name="grauInstrucao" value="completo" required> 
+                Completo
+            </label>
+    
+            <label>
+                <input type="radio" name="grauInstrucao" value="incompleto_cursando"> 
+                Incompleto / Cursando
+            </label>
+        </div>
+    </form>
+    </div>
+ <div class="pequeno">
+            <label for="Curso">Curso/Escolaridade</label>
+            <input type="text" id="Curso" required>
+        </div>
+</body>
+</html>
+
+
+

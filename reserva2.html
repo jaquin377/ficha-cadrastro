@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de cadastro</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="topo">
+            <div class="image">
+                <img src="imagens/registro-online.png" alt="Logo">
+            </div>
+            <div class="cadastro-topo">
+                <h1>Ficha de cadastro de funcionário</h1>
+                <p>Formulário para coleta de dados pessoais, documentos e informações necessárias para admissão e registro interno do colaborador</p>
+            </div>
+        </div>
+
+        <div class="documentos-necessarios">
+            <div class="imagem-documentos">
+                <img src="imagens/registro.png" alt="Documentos">
+            </div>
+            <div class="dados-left">
+                <ul>
+                    <li>Documento de Identidade (RG)</li>
+                    <li>CPF</li>
+                    <li>Carteira de Trabalho (física ou digital)</li>
+                    <li>Comprovante de Residência</li>
+                </ul>
+            </div>
+            <div class="dados-right">
+                <ul>
+                    <li>Título de eleitor</li>
+                    <li>Certificado de reservista (para homens)</li>
+                    <li>Certificado de nascimento ou casamento</li>
+                    <li>PIS/PASEP (se possuir)</li>
+                </ul>
+            </div>
+        </div>
+
+        <form>
+            
+            <div class="dados-pessoais">
+                <div class="informacao-funcionario">
+                    <h2>1. Dados pessoais</h2>
+                    <p>Informações básicas do funcionário</p>
+                </div>
+
+                <div class="linha">
+                    <div class="grande">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required>
+                    </div>
+                    <div class="medio">
+                        <label for="nome-social">Nome Social</label>
+                        <input type="text" id="nome-social">
+                    </div>
+                    <div class="pequeno">
+                        <label for="sexo">Sexo</label>
+                        <input type="text" id="sexo">
+                    </div>
+                    <div class="input-group">
+                        <label for="nacionalidade">Nacionalidade</label>
+                        <select id="nacionalidade" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="brasileira">Brasileiro(a)</option>
+                            <option value="portuguesa">Português(a)</option>
+                            <option value="outra">Outro(a)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="nascimento">Data de Nascimento</label>
+                        <input type="date" id="nascimento" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="telefone">Telefone</label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            placeholder="(11) 99999-9999"
+                            pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+                            required
+                        >
+                    </div>
+                    <div class="pequeno">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro">
+                    </div>
+                    <div class="pequeno">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade">
+                    </div>
+                    <div class="pequeno">
+                        <label for="cep">CEP</label>
+                        <input 
+                            type="text" 
+                            id="cep" 
+                            name="cep" 
+                            placeholder="00000-000" 
+                            pattern="\d{5}-?\d{3}" 
+                            maxlength="9"
+                            required
+                        >
+                    </div>
+                    <div class="pequeno">
+                        <label for="endereco">Endereço</label>
+                        <input 
+                            type="text" 
+                            id="endereco" 
+                            name="endereco" 
+                            placeholder="Rua, número, complemento"
+                            required
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="dados-pessoais2">
+                <div class="informacao-funcionario">
+                    <h2>2. Documentos Necessários</h2>
+                    <p>Dados para identificação e registro</p>
+                </div>
+
+                <div class="linha">
+                    <div class="pequeno">
+                        <label for="rg">RG</label>
+                        <input type="text" id="rg" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="emissao">Data de Emissão</label>
+                        <input type="date" id="emissao" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="orgao">Órgão Emissor</label>
+                        <input type="text" id="orgao" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="uf-rg">UF</label>
+                        <select id="uf-rg" name="uf-rg" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="AC">AC - Acre</option>
+                            <option value="AL">AL - Alagoas</option>
+                            <option value="AP">AP - Amapá</option>
+                            <option value="AM">AM - Amazonas</option>
+                            <option value="BA">BA - Bahia</option>
+                            <option value="CE">CE - Ceará</option>
+                            <option value="DF">DF - Distrito Federal</option>
+                            <option value="ES">ES - Espírito Santo</option>
+                            <option value="GO">GO - Goiás</option>
+                            <option value="MA">MA - Maranhão</option>
+                            <option value="MT">MT - Mato Grosso</option>
+                            <option value="MS">MS - Mato Grosso do Sul</option>
+                            <option value="MG">MG - Minas Gerais</option>
+                            <option value="PA">PA - Pará</option>
+                            <option value="PB">PB - Paraíba</option>
+                            <option value="PR">PR - Paraná</option>
+                            <option value="PE">PE - Pernambuco</option>
+                            <option value="PI">PI - Piauí</option>
+                            <option value="RJ">RJ - Rio de Janeiro</option>
+                            <option value="RN">RN - Rio Grande do Norte</option>
+                            <option value="RS">RS - Rio Grande do Sul</option>
+                            <option value="RO">RO - Rondônia</option>
+                            <option value="RR">RR - Roraima</option>
+                            <option value="SC">SC - Santa Catarina</option>
+                            <option value="SP">SP - São Paulo</option>
+                            <option value="SE">SE - Sergipe</option>
+                            <option value="TO">TO - Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="pequeno">
+                        <label for="cpf">CPF</label>
+                        <input 
+                            type="text" 
+                            id="cpf" 
+                            name="cpf" 
+                            placeholder="000.000.000-00" 
+                            pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                            maxlength="14"
+                            required
+                        >
+                    </div>
+                    <div class="pequeno">
+                        <label for="titulo">Título de Eleitor</label>
+                        <input type="text" id="titulo" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="zona">Zona</label>
+                        <input type="text" id="zona" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="secao">Seção</label>
+                        <input type="text" id="secao" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="ctps">CTPS</label>
+                        <input type="text" id="ctps" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="serie">Série</label>
+                        <input type="text" id="serie" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="uf-ctps">UF</label>
+                        <select id="uf-ctps" name="uf-ctps" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="SP">SP - São Paulo</option>
+                            <option value="RJ">RJ - Rio de Janeiro</option>
+                            <option value="MG">MG - Minas Gerais</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="emissao-ctps">Data de Emissão</label>
+                        <input type="date" id="emissao-ctps" required>
+                    </div>
+                    <div class="medio">
+                        <label for="pis">PIS/PASEP</label>
+                        <input 
+                            type="text" 
+                            id="pis" 
+                            name="pis" 
+                            placeholder="00000000000" 
+                            pattern="\d{11}" 
+                            maxlength="11" 
+                            required
+                        >
+                    </div>
+                    <div class="pequeno">
+                        <label for="reservista">Reservista (Número)</label>
+                        <input type="text" id="reservista" required>
+                    </div>
+                    <div class="pequeno">
+                        <label for="categoria">Categoria</label>
+                        <input type="text" id="categoria" required>
+                    </div>
+                </div>
+            </div>
+<!-- SEÇÃO 3: FILIAÇÃO E ESTADO CIVIL -->
+<div class="dados-pessoais3">
+    <div class="informacao-funcionario">
+        <h2>3. Filiação e estado civil</h2>
+        <p>Informações familiares e escolares</p>
+    </div>
+
+    <div class="linha">
+        <div class="medio">
+            <label for="nome-pai">Nome do pai</label>
+            <input type="text" id="nome-pai" required>
+        </div>
+        
+        <div class="medio">
+            <label for="nome-mae">Nome da mãe</label>
+            <input type="text" id="nome-mae" required>
+        </div>
+        
+        <div class="pequeno">
+            <label for="estado-civil">Estado civil</label>
+            <select id="estado-civil" name="estadoCivil" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
+                <option value="uniao_estavel">União Estável</option>
+            </select>
+        </div>
+        
+        <div class="grande">
+            <label for="conjuge">Cônjuge (nome completo)</label>
+            <input type="text" id="conjuge">
+        </div>
+
+        <!-- Ajustado para alinhar perfeitamente com a imagem -->
+        <div class="pequeno grupo-radio-container">
+            <label class="titulo-radio">Grau de instrução</label>
+            <div class="radio-opcoes">
+                <label>
+                    <input type="radio" name="grauInstrucao" value="completo" required> 
+                    Completo
+                </label>
+                <label>
+                    <input type="radio" name="grauInstrucao" value="incompleto_cursando"> 
+                    Incompleto / Cursando
+                </label>
+            </div>
+        </div>
+
+        <div class="grande">
+            <label for="curso">Curso / Escolaridade</label>
+            <input type="text" id="curso" required>
+        </div>
+    </div>
+</div>
+           
